@@ -6,7 +6,7 @@
  * @number: number to store in new node
  * Return: pointer to the new node
  */
-listint_t *insert_node(listint_t **head, int number);
+listint_t *insert_node(listint_t **head, int number)
 {
 	listint_t *runner;
 	listint_t *new;
