@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Script adding all arguments to a Python list and saving it"""
 
+
 import json
 import sys
 
@@ -13,7 +14,7 @@ try:
 except FileNotFoundError:
     py_list = []
 finally:
-        for i in sys.argv[1:]:
-            py_list.append(str(i))
-        save_to_json_file(py_list, filename)
+    for i in sys.argv[1:]:
+        py_list.append(str(i))
+    save_to_json_file(py_list, filename)
 
