@@ -1,5 +1,5 @@
 #!/usr/bin/node
-module.exports = class Rectangle {
+class Rectangle {
   constructor (w, h) {
     if (w <= 0 || !Number.isInteger(w) || h <= 0 || !Number.isInteger(h)) {
       return {};
@@ -8,4 +8,5 @@ module.exports = class Rectangle {
     this.width = w;
     this.height = h;
   }
-};
+}
+module.exports = Rectangle;
