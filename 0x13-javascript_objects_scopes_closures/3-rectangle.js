@@ -2,28 +2,20 @@
 
 class Rectangle {
   constructor (w, h) {
-    if (w <= 0 || h <= 0 || typeof w !== 'number' || typeof h !== 'number') {
-      return;
+    if ((w = parseInt(w)) > 0 && (h = parseInt(h)) > 0) {
+      this.width = w;
+      this.height = h;
     }
-    this.width = w;
-    this.height = h;
   }
 
   print () {
-    if (!this.width || !this.height) {
-      console.log('Empty rectangle');
-      return;
-    }
-
-    let rect = '';
     for (let i = 0; i < this.height; i++) {
+      let rect = '';
       for (let j = 0; j < this.width; j++) {
         rect += 'X';
       }
-      rect += '\n';
+      console.log(rect);
     }
-    console.log(rect);
   }
 }
-
 module.exports = Rectangle;
