@@ -3,19 +3,19 @@
 const square = require('./5-square');
 
 class Square extends square {
-  constructor (size) {
-    super(size, size);
+  constructor (w, h) {
+    this.width = w;
+    this.height = h;
   }
-
-  charPrint (c) {
+}
+ module.exports = Square; 
+charPrint (c) {
     const char = c || 'X';
-    for (let i = 0; i < this.size; i++) {
+    for (let i = 0; i < this.height; i++) {
       let row = '';
-      for (let j = 0; j < this.size; j++) {
+      for (let j = 0; j < this.width; j++) {
         row += char;
       }
       console.log(row);
     }
   }
-}
-module.exports = Square;
