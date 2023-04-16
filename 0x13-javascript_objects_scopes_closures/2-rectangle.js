@@ -2,7 +2,6 @@
 class Rectangle {
   constructor (w, h) {
     if ((w = parseInt(w)) > 0 && (h = parseInt(h))) {
-      // this.name = 'Rectangle';
       this.width = w;
       this.height = h;
     }
