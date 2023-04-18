@@ -7,13 +7,13 @@ mysql_username = sys.argv[1]
 mysql_password = sys.argv[2]
 database_name = sys.argv[3]
 
-db = MySQLdb.connect(host="localhost", port=3306, user=mysql_username, passwd=mysql_password, db=database_name )
+db = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1], passwd=sys.argv[2], db=database_name )
 
 cursor = db.cursor()
 cursor.execute("SELECT * FROM states ORDER BY states.id ASC;")
 rows = cursor.fetchall()
-for state in rows:
-    print(state)
+for row in rows:
+    print(row)
 
-cursor.close()
-db.close()
+"'cursor.close()
+db.close()""
