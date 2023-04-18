@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+if __name__ == '__main__':
 import MySQLdb
 import sys
 
@@ -8,7 +9,7 @@ database_name = sys.argv[3]
 db = MySQLdb.connect(host="localhost", port=3306, user= "mysql_username", passwd= "mysql_password", db= "database_name", charset="utf8")
 
 cursor = db.cursor()
-cursor.execute("SELECT * FROM states ORDER BY id ASC")
+cursor.execute("SELECT * FROM states ORDER BY states.id ASC;")
 
 cursor.fetchall() = query_states
 for state in cursor.fetchall():
