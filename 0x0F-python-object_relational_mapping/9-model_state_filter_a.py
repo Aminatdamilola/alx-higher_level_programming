@@ -22,10 +22,9 @@ def main():
     session = Session()
 
     states = session.query(State).filter(
-             State.name.like("%a%")).order_by(State.id)
+             State.name.like('%a%')).order_by(State.id)
     for state in states:
         print("{}: {}".format(states.id, state.name))
-
     session.close()
 
 
