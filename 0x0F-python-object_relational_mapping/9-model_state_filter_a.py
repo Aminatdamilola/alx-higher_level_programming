@@ -21,12 +21,12 @@ def main():
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = session.query(State).filter(
-             State.name.like('%a%')).order_by(State.id)
+    states = session.query(State)\
+                    .filter(State.name.like('%a%')).order_by(State.id)
     for state in states:
         print("{}: {}".format(states.id, state.name))
     session.close()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
