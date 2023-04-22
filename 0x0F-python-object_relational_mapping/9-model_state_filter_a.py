@@ -2,6 +2,7 @@
 """Script that lists all State objects that contain the letter a from the
 databasehbtn_0e_6_usa"""
 
+
 if __name__ == "__main__":
 
     import sys
@@ -19,5 +20,5 @@ if __name__ == "__main__":
                     .filter(State.name.like('%a%'))\
                     .order_by(State.id)
     for state in states:
-        print("{}: {}".format(states.id, state.name))
+        print("{}: {}".format(state.id, state.name))
     session.close()
