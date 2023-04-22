@@ -25,7 +25,7 @@ def main():
     states = session.query(State).filter(
              State.name.like("%a%")).order_by(State.id).all()
     for state in states:
-        print("{}: {}".format(state.id, state.name))
+        print("{}: {}".format(states.id, state.name))
 
     session.close()
 
