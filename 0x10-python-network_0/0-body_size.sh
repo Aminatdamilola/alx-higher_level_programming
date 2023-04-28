@@ -8,5 +8,4 @@ fi
 
 size=$(curl -s "$1")
 
-echo "Size of response body: ${size} bytes"
-
+echo "The size of the response body is $(echo -n "$size" | wc -c) bytes"
