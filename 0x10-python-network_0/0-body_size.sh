@@ -6,6 +6,7 @@ if [ $# -eq 0 ]; then
   exit 1
 fi
 
-size=$(curl -s -w '%{size_download}' -o /dev/null "$1")
+size=$(curl -s "$1")
 
 echo "Size of response body: ${size} bytes"
+
