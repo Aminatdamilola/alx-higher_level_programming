@@ -7,6 +7,6 @@ from sys import argv
 
 
 with urllib.request.urlopen(argv[1]) as response:
-    the_head = response.info()
-    request_id = the_head['X-Request-Id']
+    html = response.info()
+    request_id = html['X-Request-Id']
 print(request_id)
